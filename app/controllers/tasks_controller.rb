@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = task.new(task_params)
+    task = Task.new(task_params)
     task.save!
     redirect_to tasks_url, notice: "タスク「#{task.name}を登録しました。」"
   end
