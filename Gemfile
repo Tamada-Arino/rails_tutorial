@@ -42,6 +42,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 gem 'slim-rails'
+gem "html2slim", github: "slim-template/html2slim"
 gem 'bootstrap'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
