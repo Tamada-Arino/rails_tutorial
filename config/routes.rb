@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :users only: %i[new edit show index]
+    resources :users, only: %i[new edit show index]
   end
   root to: 'tasks#index'
   resources :tasks
