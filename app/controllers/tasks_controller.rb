@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
