@@ -17,7 +17,7 @@ class Admin::UsersController < ApplicationController
     if @user.save
       redirect_to admin_user_url(@user), notice: "ユーザー「#{@user.name}」を登録しました。"
     else
-      reder :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -31,7 +31,7 @@ class Admin::UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to admin_user_url(@user), notice: "ユーザー「#{@user.name}」を更新しました。"
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -45,6 +45,6 @@ class Admin::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :admin, :password, :password_confirmation)
   end
 end
