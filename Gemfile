@@ -45,6 +45,7 @@ gem 'slim-rails'
 gem "html2slim", github: "slim-template/html2slim"
 gem 'bootstrap'
 gem 'sassc-rails'
+gem 'rails_autolink'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
